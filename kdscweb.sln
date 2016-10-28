@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{37CD794C-A939-4731-891F-ECE7DC0C9611}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kdscweb.WEBUI", "kdscweb.WEBUI\kdscweb.WEBUI.csproj", "{F076D6C8-9077-44E1-9B3C-9578884FDE40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Business", "2 - Business", "{00B3C47D-7155-4C9B-90CC-AB119C8C6383}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Data", "3 - Data", "{61A99DCC-44EE-47D2-A7F5-5FC4A98B5076}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Shared", "4 - Shared", "{DDF40EF9-A859-4E00-A575-6443C12690B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kdscweb.Shared", "kdscweb.Shared\kdscweb.Shared.csproj", "{2EF62B29-040B-4760-B71E-683BAE8EB0C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kdscweb.Data", "kdscweb.Data\kdscweb.Data.csproj", "{0AD48EE5-A99F-48BA-B725-47333D4BD6BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kdscweb.Business", "kdscweb.Business\kdscweb.Business.csproj", "{DA5F5FE1-9329-4353-A29B-B99A375D8690}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs/tfs/its
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = kdscweb.Business\\kdscweb.Business.csproj
+		SccProjectTopLevelParentUniqueName1 = kdscweb.sln
+		SccProjectName1 = kdscweb.Business
+		SccLocalPath1 = kdscweb.Business
+		SccProjectUniqueName2 = kdscweb.Data\\kdscweb.Data.csproj
+		SccProjectTopLevelParentUniqueName2 = kdscweb.sln
+		SccProjectName2 = kdscweb.Data
+		SccLocalPath2 = kdscweb.Data
+		SccProjectUniqueName3 = kdscweb.Shared\\kdscweb.Shared.csproj
+		SccProjectTopLevelParentUniqueName3 = kdscweb.sln
+		SccProjectName3 = kdscweb.Shared
+		SccLocalPath3 = kdscweb.Shared
+		SccProjectUniqueName4 = kdscweb.WEBUI\\kdscweb.WEBUI.csproj
+		SccProjectTopLevelParentUniqueName4 = kdscweb.sln
+		SccProjectName4 = kdscweb.WEBUI
+		SccLocalPath4 = kdscweb.WEBUI
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F076D6C8-9077-44E1-9B3C-9578884FDE40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F076D6C8-9077-44E1-9B3C-9578884FDE40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F076D6C8-9077-44E1-9B3C-9578884FDE40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F076D6C8-9077-44E1-9B3C-9578884FDE40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EF62B29-040B-4760-B71E-683BAE8EB0C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EF62B29-040B-4760-B71E-683BAE8EB0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EF62B29-040B-4760-B71E-683BAE8EB0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EF62B29-040B-4760-B71E-683BAE8EB0C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD48EE5-A99F-48BA-B725-47333D4BD6BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD48EE5-A99F-48BA-B725-47333D4BD6BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD48EE5-A99F-48BA-B725-47333D4BD6BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD48EE5-A99F-48BA-B725-47333D4BD6BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA5F5FE1-9329-4353-A29B-B99A375D8690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA5F5FE1-9329-4353-A29B-B99A375D8690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA5F5FE1-9329-4353-A29B-B99A375D8690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA5F5FE1-9329-4353-A29B-B99A375D8690}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F076D6C8-9077-44E1-9B3C-9578884FDE40} = {37CD794C-A939-4731-891F-ECE7DC0C9611}
+		{2EF62B29-040B-4760-B71E-683BAE8EB0C3} = {DDF40EF9-A859-4E00-A575-6443C12690B9}
+		{0AD48EE5-A99F-48BA-B725-47333D4BD6BF} = {61A99DCC-44EE-47D2-A7F5-5FC4A98B5076}
+		{DA5F5FE1-9329-4353-A29B-B99A375D8690} = {00B3C47D-7155-4C9B-90CC-AB119C8C6383}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,154 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using kdscweb.Shared;
+
+<nav class="navbar navbar-default actionbar">
+    <div class="container-fluid">
+        <div class="navbar-collapse collapse" id="navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+
+                <li>
+                    <a href="#" onclick="javascript: $('#formImport').submit();">
+                        <i class="glyphicon glyphicon-envelope"></i> Enviar para os gerentes
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<form id="formImport" disablevalidator name="FormModalBulkLoad" enctype="multipart/form-data" action="@Url.Action("LoadFile", "Home")" method="post">
+    <div class="well">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="FILE" class="control-label">Planilha de Controle</label>
+                    <input type="file" id="FILE1" name="uploadFILE1" data-file-extensions=".xls,.xlsx" value="" data-val="true"
+                           data-val-required="Selecione um arquivo!"
+                           data-error="Selecione um arquivo"
+                           aria-required="true" aria-describedby="FILE-error" />
+                    <span class="text-danger field-validation-error" data-valmsg-for="FILE1" data-valmsg-replace="true"></span>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="FILE" class="control-label">Diretório dos Produtos Finais</label>
+                    <input type="text" data-path="" title="Insira um caminho de rede válido para verificação dos documentos." maxlength="250" name="filePath" id="PATHFILES" class="form-control" />
+                    <span class="text-danger field-validation-error" data-valmsg-for="FOLDER" data-valmsg-replace="true"></span>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</form>
+@if (@ViewBag.Instrucoes)
+{
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            Instruções KDSC
+        </div>
+        <div class="panel-body">
+            Clique em <b>Planilha de Controle</b> para selecionar a planilha contendo informações sobre os engagements.<br />
+            No campo <b>Diretório dos Produtos Finais</b> insira o caminho de rede onde estão armazenadas as respostas de circularização (digitalizadas).<br />
+            O diretório final inserido deve terminar com uma data válida no formato "yyyy.mm.dd" (Ano.Mês.Dia). 
+        </div>
+    </div>
+}
+
+@if (@ViewBag.arquivosEnviadoComSucesso != null)
+{
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3>E-mails enviados</h3>
+        </div>
+        <div class="panel-body">
+            @if (@ViewBag.CountSuccess > 1)
+            {
+                <span><b>@ViewBag.CountSuccess</b> respostas de circularização (digitalizadas) foram localizadas no diretório informado e enviadas para seus devidos "engagement".</span>
+            }
+            else
+            {
+                <span><b>@ViewBag.CountSuccess</b> resposta de circularização (digitalizada) foi localizada no diretório informado e enviada para seu devido "engagement".</span>
+            }
+        </div>
+    </div>
+}
+
+@if (@ViewBag.arquivosNaoEncontrados != null || @ViewBag.arquivosErro != null || @ViewBag.arquivosErroDuplicado != null)
+{
+    <div class="panel panel-warning">
+        @if (@ViewBag.arquivosNaoEncontrados != null)
+        {<div class="panel-heading">
+            <h3>Arquivos Não localizados na planilha de controle</h3>
+        </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    @foreach (var arquivosNaoEncontrados in ((List<FileInfo>)ViewBag.arquivosNaoEncontrados))
+                    {
+                        <li class="li_NaoEncontrados list-group-item list-group-item-danger"><b>Nome do arquivo:</b> @arquivosNaoEncontrados.Name</li>
+                    }
+                </ul>
+            </div>
+
+        }
+        @if (@ViewBag.arquivosErro != null)
+        {<div class="panel-heading">
+            <h3>E-mails não enviados.</h3>
+        </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    @foreach (var arquivosErro in ((List<DocumentoModel>)ViewBag.arquivosErro))
+                    {
+                        <li class="li_EmailErro_0 list-group-item list-group-item-danger"><b>Job:</b> @arquivosErro.job</li>
+                        <li class="li_EmailErro_0 list-group-item list-group-item-danger"><b>Gerente:</b> @arquivosErro.gerente.nome / <b>E-mail:</b> @arquivosErro.gerente.email</li>
+                        <li class="li_EmailErro_0 list-group-item list-group-item-danger">
+                            <ul class="list-group">
+                                <li class="li_EmailErro_1 list-group-item list-group-item-danger"><b>Mensagem de erro:</b> @arquivosErro.mensagemDeErro</li>
+                                @if (@arquivosErro.mensagemDeErro == "Diretório de destino não encontrado")
+                                {
+                                    <li class="li_EmailErro_1 list-group-item list-group-item-danger">Diretório de Destino: @arquivosErro.diretorioDestino</li>
+                                }
+                            </ul>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+        @if (@ViewBag.arquivosErroDuplicado != null)
+        {<div class="panel-heading">
+            <h3>Arquivos duplicados.</h3>
+        </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    @foreach (var arquivosErroDuplicado in ((List<DocumentoModel>)ViewBag.arquivosErroDuplicado))
+                    {
+                        <li class="li_ArquivosErroDuplicado_0 list-group-item list-group-item-warning"><b>Job:</b> @arquivosErroDuplicado.job<br /><b>Arquivo:</b> @arquivosErroDuplicado.arquivo</li>
+                    }
+                </ul>
+            </div>
+        }
+
+    </div>
+}
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.validator.unobtrusive.parse("#formImport");
+    });
+</script>
+
+

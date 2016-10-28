@@ -1,0 +1,76 @@
+﻿@using br.kpmg.Framework64.Web;
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <title>KPortal 2.0: @(KSession.Webname)</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="http://@(KSession.KDocsUrl).br.kworld.kpmg.com/Assets/img/favicon.ico" rel="icon">
+    <link href="http://@(KSession.KDocsUrl).br.kworld.kpmg.com/Assets/css/kportal-min.css" rel="stylesheet">
+    <script src="http://@(KSession.KDocsUrl).br.kworld.kpmg.com/Assets/js/kportalfluent-min.js"></script>
+        
+
+   
+
+</head>
+
+
+
+<body>
+
+
+    <header>
+        <div class="container-fluid ktop">
+            <div class="row">
+                <img src="http://@(KSession.KDocsUrl).br.kworld.kpmg.com/Assets/img/TopBranding.jpg" />
+                <h1>@(KSession.Webname)</h1>
+            </div>
+        </div>
+
+    </header>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse" id="navbar" aria-expanded="false">
+
+                @*@Html.Raw(KSession.Menu)*@
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-user"></span> &nbsp; 
+                            @*@KSession.User.fullName*@
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid kprincipal">
+        <div class="row">
+            <div class="col-md-12">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <p class="text-muted">
+                &copy;
+                <span id="indexAnoAtual"></span> KPMG Auditores Independentes, a Brazilian entity and a member firm of the KPMG network of independent member firms affiliated with KPMG International Cooperative ("KPMG International"), a Swiss entity. All rights reserved. KPMG International Cooperative ("KPMG International") is a Swiss entity. Member firms of the KPMG network of independent firms are affiliated with KPMG International. KPMG International provides no client services. No member firm has any authority to obligate or bind KPMG International or any other member firm vis-&agrave;-vis third parties, nor does KPMG International have any such authority to obligate or bind any member firm.
+            </p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
