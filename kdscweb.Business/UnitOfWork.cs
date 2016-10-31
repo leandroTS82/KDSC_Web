@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using kdscweb.Data;
-using kdscweb.Data.Context;
-using kdscweb.Shared.Entity;
+using Data;
+using Data.Context;
+using Shared.Entity;
 
-namespace kdscweb.Business
+namespace Business
 {
     public class UnitOfWork : IDisposable
     {

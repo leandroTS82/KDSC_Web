@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using kdscweb.Shared.Entity;
+using Shared.Entity;
 
-namespace kdscweb.Business.Component
+namespace Business.Component
 {
     public class BaseComponent
     {

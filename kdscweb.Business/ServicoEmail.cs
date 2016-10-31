@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Mail;
-using kdscweb.Shared;
+using Shared;
 using System.Configuration;
 
 
-namespace kdscweb.Business
+namespace Business
 {
     public class ServicoEmail
     {

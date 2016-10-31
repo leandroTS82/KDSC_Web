@@ -1,14 +1,14 @@
-﻿using kdscweb.Business;
-using kdscweb.Business.Component;
+﻿using Business;
+using Business.Component;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Web.Mvc;
-using kdscweb.Shared;
+using Shared;
 using System.Linq;
-using kdscweb.Shared.Entity;
+using Shared.Entity;
 
-namespace kdscweb.WEBUI.Controllers
+namespace WEBUI.Controllers
 {
     public class HomeController : Controller
     {

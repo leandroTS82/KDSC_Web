@@ -1,4 +1,4 @@
-namespace kdscweb.Data.Migrations
+namespace Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

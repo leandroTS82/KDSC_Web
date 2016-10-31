@@ -67,7 +67,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComponentValidation\BaseValidation.cs" />
     <Compile Include="Component\BaseComponent.cs" />
     <Compile Include="DefineColecaoDocumentos.cs" />
     <Compile Include="Log.cs" />
@@ -83,13 +82,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\kdscweb.Data\kdscweb.Data.csproj">
+    <ProjectReference Include="..\kdscweb.Data\Data.csproj">
       <Project>{0ad48ee5-a99f-48ba-b725-47333d4bd6bf}</Project>
-      <Name>kdscweb.Data</Name>
+      <Name>Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\kdscweb.Shared\kdscweb.Shared.csproj">
+    <ProjectReference Include="..\kdscweb.Shared\Shared.csproj">
       <Project>{2ef62b29-040b-4760-b71e-683bae8eb0c3}</Project>
-      <Name>kdscweb.Shared</Name>
+      <Name>Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

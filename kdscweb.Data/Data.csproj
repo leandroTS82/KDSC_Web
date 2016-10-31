@@ -71,9 +71,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\kdscweb.Shared\kdscweb.Shared.csproj">
+    <ProjectReference Include="..\kdscweb.Shared\Shared.csproj">
       <Project>{2ef62b29-040b-4760-b71e-683bae8eb0c3}</Project>
-      <Name>kdscweb.Shared</Name>
+      <Name>Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

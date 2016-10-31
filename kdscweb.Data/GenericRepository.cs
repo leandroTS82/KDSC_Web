@@ -5,10 +5,10 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using kdscweb.Data.Context;
+using Data.Context;
 using System.Data.Entity.Validation;
 
-namespace kdscweb.Data
+namespace Data
 {
     public class GenericRepository<TEntity> where TEntity : class
     {

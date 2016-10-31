@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace kdscweb.Shared.Entity
+namespace Shared.Entity
 {
     public partial class Engagement
     {

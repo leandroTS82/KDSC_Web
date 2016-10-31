@@ -1,9 +1,9 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using kdscweb.Data.Configuration;
-using kdscweb.Shared.Entity;
+using Data.Configuration;
+using Shared.Entity;
 
-namespace kdscweb.Data.Context
+namespace Data.Context
 {
     public partial class kdscwebContext : DbContext
     {

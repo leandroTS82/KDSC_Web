@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using kdscweb.Shared;
+using Shared;
 using System.IO;
 using System;
 using System.Net.Mail;
 using System.Net;
 using System.Linq;
 
-namespace kdscweb.Business
+namespace Business
 {
     public class ManageFiles
     {

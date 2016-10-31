@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace kdscweb.Shared
+namespace Shared
 {
     public class ColecaoDocumentosModel
     {

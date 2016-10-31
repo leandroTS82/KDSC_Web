@@ -1,18 +1,18 @@
-namespace kdscweb.Data.Migrations
+namespace Data.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<kdscweb.Data.Context.kdscwebContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Data.Context.kdscwebContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(kdscweb.Data.Context.kdscwebContext context)
+        protected override void Seed(Data.Context.kdscwebContext context)
         {
             //  This method will be called after migrating to the latest version.
 

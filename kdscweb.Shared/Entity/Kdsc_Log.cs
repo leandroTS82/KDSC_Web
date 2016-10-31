@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace kdscweb.Shared.Entity
+namespace Shared.Entity
 {
     public class TAB_KDSC_LOG
     {

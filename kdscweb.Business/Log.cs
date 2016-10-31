@@ -1,11 +1,11 @@
-﻿using kdscweb.Business.Component;
-using kdscweb.Shared;
-using kdscweb.Shared.Entity;
+﻿using Business.Component;
+using Shared;
+using Shared.Entity;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace kdscweb.Business
+namespace Business
 {
     public class Log
     {

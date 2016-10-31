@@ -2,12 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Web;
-using kdscweb.Shared;
+using Shared;
 using System.Data;
 using Excel;
 using System.IO;
 
-namespace kdscweb.Business
+namespace Business
 {
     public class ReadSpreadsheet
     {
